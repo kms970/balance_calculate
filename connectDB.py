@@ -11,7 +11,7 @@ def ConnectDataBase():
     try:
         with DBconnection.cursor() as curs:
             curs=DBconnection.cursor()
-            sql="select * from sys.new_table"
+            sql="select * from List.CoupangList"
             curs.execute(sql)
             data=curs.fetchall()
             for row in data:
