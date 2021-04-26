@@ -1,4 +1,5 @@
 import connectDB
+import pandas as pd
 
 def print_hi(name):
     # 스크립트를 디버그하려면 하단 코드 줄의 중단점을 사용합니다.
@@ -7,4 +8,5 @@ def print_hi(name):
 
 # 스크립트를 실행하려면 여백의 녹색 버튼을 누릅니다.
 if __name__ == '__main__':
-    connectDB.ConnectDataBase()
+    mainDataFrame = pd.DataFrame(connectDB.MyDataBase().ConnectDataBase())
+    print(mainDataFrame)
