@@ -17,8 +17,8 @@ class MyDataBase:
         try:
             with DBconnection.cursor() as curs:
                 curs = DBconnection.cursor(pymysql.cursors.DictCursor)
-                sql = "select * from List.CoupangList"
-                curs.execute(sql)
+                connectSql = "select * from List.CoupangList"
+                curs.execute(connectSql)
                 data = curs.fetchall()
                 self.DataBaseDataFrame = pd.DataFrame(data)
 
