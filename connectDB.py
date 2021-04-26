@@ -5,10 +5,16 @@ PORT = 3306
 USER = 'kkhan97'
 PASSWORD = 'grandmaster1'
 
-DBconnection = pymysql.connect(host=HOST,port=PORT,user=USER,password=PASSWORD)
+def ConnectDataBase():
+    DBconnection = pymysql.connect(host=HOST,port=PORT,user=USER,password=PASSWORD)
 
-if DBconnection.open:
-    with DBconnection.cursor() as curs:
-        print("connected")
-
-DBconnection.close()
+    try:
+        with DBconnection.cursor() as curs:
+            curs=DBconnection.cursor()
+            sql="select * from sys.new_table"
+            curs.execute(sql)
+            data=curs.fetchall()
+            for row in data:
+                print(row)
+    finally:
+        DBconnection.close()
