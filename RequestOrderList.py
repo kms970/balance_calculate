@@ -1,26 +1,28 @@
-import os
-import time
 import hmac, hashlib
+import pprint
 import urllib.parse
 import urllib.request
 import ssl
+from datetime import datetime, timedelta
+import json
 
-os.environ['TZ'] = 'GMT+0'
+gmt_time = datetime.now() - timedelta(hours=9) #한국 기준
+gmt_time_str = "{:%y%m%d}T{:%H%M%S}Z".format(gmt_time, gmt_time)
 
-datetime=time.strftime('%y%m%d')+'T'+time.strftime('%H%M%S')+'Z'
 method = "GET"
+
 #replace with your own vendorId
-path = "/v2/providers/openapi/apis/api/v4/vendors/***/ordersheets"
-query = urllib.parse.urlencode({"createdAtFrom": "2021-04-27", "createdAtTo": "2021-04-28", "status": "ACCEPT"})
+path = "/v2/providers/openapi/apis/api/v4/vendors/A00356115/ordersheets"
+query = urllib.parse.urlencode({"createdAtFrom": "2021-04-28", "createdAtTo": "2021-04-29", "status": "ACCEPT"})
 
-message = datetime+method+path+query
+message = gmt_time_str+method+path+query
 
-accesskey = ""
-secretkey = ""
+accesskey = "****"
+secretkey = "****"
 
 signature=hmac.new(secretkey.encode('utf-8'),message.encode('utf-8'),hashlib.sha256).hexdigest()
 
-authorization  = "CEA algorithm=HmacSHA256, access-key="+accesskey+", signed-date="+datetime+", signature="+signature
+authorization  = "CEA algorithm=HmacSHA256, access-key="+accesskey+", signed-date="+gmt_time_str+", signature="+signature
 #print(authorization)
 
 # ************* SEND THE REQUEST *************
@@ -28,7 +30,7 @@ url = "https://api-gateway.coupang.com"+path+"?%s" % query
 
 print('BEGIN REQUEST++++++++++++++++++++++++++++++++++++')
 req = urllib.request.Request(url)
-#print(req)
+print(req)
 
 req.add_header("Content-type","application/json;charset=UTF-8")
 req.add_header("Authorization",authorization)
@@ -45,7 +47,7 @@ print(req.get_header("Authorization"))
 print(req.get_method())
 
 print('RESPONSE++++++++++++++++++++++++++++++++++++')
-#resp = urllib.request.urlopen(req)
+resp = urllib.request.urlopen(req)
 
 try:
     resp = urllib.request.urlopen(req,context=ctx)
@@ -59,4 +61,5 @@ except urllib.request.URLError as e:
 else:
     # 200
     body = resp.read().decode(resp.headers.get_content_charset())
-    print(body)
+    responseJson=json.loads(body)
+    pprint.pprint(responseJson)
