@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="RequestOderList(allList)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RequestOrder/MakeHMAC.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestOrder/MakeHMAC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620049043643</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="헤더파일 분리">
+      <created>1620052212636</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1620052212636</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +244,7 @@
     <MESSAGE value="request and response" />
     <MESSAGE value="폴더 정리" />
     <MESSAGE value="캡슐화" />
-    <option name="LAST_COMMIT_MESSAGE" value="캡슐화" />
+    <MESSAGE value="헤더파일 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="헤더파일 분리" />
   </component>
 </project>

@@ -4,7 +4,7 @@ import urllib.request
 from datetime import datetime, timedelta
 
 class RequestHeader:
-    gmt_time = datetime.now() - timedelta(hours=9) #한국 기준
+    gmt_time = datetime.now() - timedelta(hours=9) # 한국 기준
     gmt_time_str = "{:%y%m%d}T{:%H%M%S}Z".format(gmt_time, gmt_time)
 
     __accesskey = "a857d3f0-8a5a-40f9-a91b-02127275010e"

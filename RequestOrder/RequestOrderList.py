@@ -9,12 +9,10 @@ hMAC = MakeHMAC.RequestHeader()
 # replace with your own vendorId
 path = hMAC.pathgetter
 query = hMAC.querygetter
-
 message = hMAC.messagegetter
-
 signature = hMAC.signaturegetter
-
 authorization = hMAC.authorizationgetter
+
 # print(authorization)
 
 # ************* SEND THE REQUEST *************
