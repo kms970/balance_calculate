@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="RequestOderList(allList)">
-      <change afterPath="$PROJECT_DIR$/Calculate/DoCalculate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RequestOrder/MakeHMAC.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestOrder/MakeHMAC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="RequestOderList(allList)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620053185048</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="헤더파일 분리&amp;nextToken을 이용하여 모든 결과 가져옴">
+      <created>1620066939772</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1620066939772</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,6 +255,7 @@
     <MESSAGE value="폴더 정리" />
     <MESSAGE value="캡슐화" />
     <MESSAGE value="헤더파일 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="헤더파일 분리" />
+    <MESSAGE value="헤더파일 분리&amp;nextToken을 이용하여 모든 결과 가져옴" />
+    <option name="LAST_COMMIT_MESSAGE" value="헤더파일 분리&amp;nextToken을 이용하여 모든 결과 가져옴" />
   </component>
 </project>
