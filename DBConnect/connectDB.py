@@ -6,10 +6,9 @@ PORT = 3306
 USER = 'kkhan97'
 PASSWORD = 'grandmaster1'
 
-
 class MyDataBase:
     def __init__(self):
-       self.DataBaseDataFrame=pd.DataFrame()
+       self.DataBaseDataFrame = pd.DataFrame()
 
     def ConnectDataBase(self):
         DBconnection = pymysql.connect(host=HOST, port=PORT, user=USER, password=PASSWORD)

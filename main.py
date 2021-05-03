@@ -1,6 +1,6 @@
-import connectDB
+from DBConnect import connectDB
 import pandas as pd
-import RequestOrderList
+
 
 def print_hi(name):
     # 스크립트를 디버그하려면 하단 코드 줄의 중단점을 사용합니다.
