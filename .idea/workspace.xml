@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="RequestOderList(allList)">
-      <change afterPath="$PROJECT_DIR$/RequestOrder/MakeHMAC.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RequestOrderList.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBConnect/connectDB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +195,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619702535751</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="폴더 정리">
+      <created>1620049013330</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1620049013330</updated>
+    </task>
+    <task id="LOCAL-00016" summary="캡슐화">
+      <created>1620049043643</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1620049043643</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,6 +233,8 @@
     <MESSAGE value="DBconnect(allList)" />
     <MESSAGE value="RequestOderList(allList)" />
     <MESSAGE value="request and response" />
-    <option name="LAST_COMMIT_MESSAGE" value="request and response" />
+    <MESSAGE value="폴더 정리" />
+    <MESSAGE value="캡슐화" />
+    <option name="LAST_COMMIT_MESSAGE" value="캡슐화" />
   </component>
 </project>
