@@ -1,4 +1,3 @@
-import pprint
 import urllib.request
 import ssl
 import json
@@ -6,6 +5,8 @@ from datetime import datetime, timedelta
 import hmac, hashlib
 import urllib.parse
 from RequestOrder import MakeHMAC
+import pandas as pd
+import pprint
 
 
 def RequestOrderVendorId(nextToken):
@@ -18,8 +19,8 @@ def RequestOrderVendorId(nextToken):
 
     # replace with your own vendorId
     path = "/v2/providers/openapi/apis/api/v4/vendors/" + hMAC.vendorID + "/ordersheets"
-    query = urllib.parse.urlencode({"createdAtFrom": "2021-04-25",
-                                    "createdAtTo": "2021-04-26",
+    query = urllib.parse.urlencode({"createdAtFrom": "2021-01-17",
+                                    "createdAtTo": "2021-01-17",
                                     "status": "FINAL_DELIVERY",
                                     "nextToken": nextToken})
 
@@ -65,6 +66,23 @@ def RequestOrderVendorId(nextToken):
         # 200
         body = resp.read().decode(resp.headers.get_content_charset())
         responseJson = json.loads(body)
-        # pprint.pprint(responseJson)
+        pprint.pprint(responseJson)
+        return responseJson
 
-    return responseJson
+
+def allDatafromAPI():
+    next_page = 1
+    all_dataframe = pd.DataFrame()
+
+    while True:
+        df = RequestOrderVendorId(next_page)
+
+        dfJson = pd.DataFrame.from_dict(df['data'], orient='columns')
+        all_dataframe = pd.concat([dfJson, all_dataframe], ignore_index=True)
+        next_page = df['nextToken']
+
+        if next_page == '':
+            break
+
+    # print(all_dataframe)
+    return all_dataframe
