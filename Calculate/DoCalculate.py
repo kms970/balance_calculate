@@ -33,10 +33,22 @@ class Calculator:
     # 반품은 반품건에 대해서 따로 정산이 됨
 
     def calculate(self):
+        calculate_sum=0
         request_order=RequestOrderList.RequestOrder()
         all_dataframe = request_order.allDatafromAPI()
-        mainDataFrame = pd.DataFrame(connectDB.MyDataBase().ConnectDataBase())
+        DBDataFrame = pd.DataFrame(connectDB.MyDataBase().ConnectDataBase())
 
         orderItems = self.selectOrderItems(all_dataframe)
 
-        print(orderItems)
+        print(DBDataFrame)
+        for index, data in orderItems.iterrows():
+            for db_index, db_data in DBDataFrame.iterrows():
+                is_find_vendorid = str(db_data['option_id']) == str(data['vendorItemId'])
+                # print("is_find: ", is_find_vendorid)
+                if is_find_vendorid:
+                    if data['deliveryChargeTypeName'] == '무료':
+                        calculate_sum = calculate_sum + (((data['orderPrice'] * (1-db_data['coupang_fees'])) - db_data['delivery_fee']) / db_data['sales_quantity'])
+                    else:
+                        calculate_sum = calculate_sum + ((data['orderPrice'] * (1-db_data['coupang_fees'])) / db_data['sales_quantity'] + 410)
+
+        return calculate_sum
