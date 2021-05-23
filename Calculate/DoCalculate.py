@@ -5,10 +5,15 @@ import pandas as pd
 
 class Calculator:
     def __init__(self):
-        self.orderItems = pd.DataFrame(columns=['orderId', 'vendorItemId', 'orderPrice', 'deliveryChargeTypeName'])
+        self.orderItems = pd.DataFrame(columns=['orderId','orderedAt', 'vendorItemId', 'orderPrice', 'deliveryChargeTypeName'])
+        self.DBDataFrame = pd.DataFrame(connectDB.MyDataBase().ConnectDataBase())
 
-    def selectOrderItems(self, all_dataframe):
+    def selectOrderItems(self):
+        #print(self.orderItems)
+        all_dataframe = RequestOrderList.RequestOrder().allDatafromAPI()
+        print(all_dataframe)
         self.orderItems['orderId'] = all_dataframe['orderId']
+        self.orderItems['orderedAt']=all_dataframe['orderedAt']
         vendorItemId=[]
         orderPrice=[]
         deliveryChargeTypeName=[]
@@ -25,7 +30,7 @@ class Calculator:
         self.orderItems['orderPrice'] = orderPrice
         self.orderItems['deliveryChargeTypeName'] = deliveryChargeTypeName
 
-        #print(order_items)
+        #print("정제쪽: ",self.orderItems)
         return self.orderItems
 
     # orderId,vendorItemId,orderPrice,deliveryChargeTypeName
@@ -34,21 +39,17 @@ class Calculator:
 
     def calculate(self):
         calculate_sum=0
-        request_order=RequestOrderList.RequestOrder()
-        all_dataframe = request_order.allDatafromAPI()
-        DBDataFrame = pd.DataFrame(connectDB.MyDataBase().ConnectDataBase())
-
-        orderItems = self.selectOrderItems(all_dataframe)
-
-        print(DBDataFrame)
+        orderItems = self.orderItems
+        #print("정산쪽: ",self.orderItems)
+        #print(self.DBDataFrame)
         for index, data in orderItems.iterrows():
-            for db_index, db_data in DBDataFrame.iterrows():
+            for db_index, db_data in self.DBDataFrame.iterrows():
                 is_find_vendorid = str(db_data['option_id']) == str(data['vendorItemId'])
                 # print("is_find: ", is_find_vendorid)
                 if is_find_vendorid:
                     if data['deliveryChargeTypeName'] == '무료':
-                        calculate_sum = calculate_sum + (((data['orderPrice'] * (1-db_data['coupang_fees'])) - db_data['delivery_fee']) / db_data['sales_quantity'])
+                        calculate_sum = calculate_sum + (((data['orderPrice'] * (1-db_data['coupang_fees'])) - db_data['delivery_fee']-db_data['purchase_price']) / db_data['sales_quantity'])
                     else:
-                        calculate_sum = calculate_sum + ((data['orderPrice'] * (1-db_data['coupang_fees'])) / db_data['sales_quantity'] + 410)
+                        calculate_sum = calculate_sum + ((data['orderPrice'] * (1-db_data['coupang_fees'])-db_data['purchase_price']) / db_data['sales_quantity'] + 410)
 
         return calculate_sum

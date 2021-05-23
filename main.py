@@ -8,8 +8,6 @@ from GUI import MainGUI
 
 if __name__ == '__main__':
     print("hello")
-    dc=DoCalculate.Calculator()
-    dc.calculate()
     app = QApplication(sys.argv)
     ex = MainGUI.MyApp()
     sys.exit(app.exec_())
