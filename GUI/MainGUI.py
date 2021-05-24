@@ -48,7 +48,7 @@ class MyApp(QWidget):
         print(MyApp.df)
         self.table.setColumnCount(len(MyApp.df.columns))
         self.table.setRowCount(len(MyApp.df.index))
-        self.table.setHorizontalHeaderLabels(['주문번호', '주문날짜', '옵션ID', '판매가격', '배송비유무'])
+        self.table.setHorizontalHeaderLabels(['주문번호', '결제날짜', '옵션ID', '판매가격', '배송비유무'])
         for i in range(len(MyApp.df.index)):
             for j in range(len(MyApp.df.columns)):
                 self.table.setItem(i, j, QTableWidgetItem(str(MyApp.df.iloc[i, j])))

@@ -5,7 +5,7 @@ import pandas as pd
 
 class Calculator:
     def __init__(self):
-        self.orderItems = pd.DataFrame(columns=['orderId','orderedAt', 'vendorItemId', 'orderPrice', 'deliveryChargeTypeName'])
+        self.orderItems = pd.DataFrame(columns=['orderId','paidAt', 'vendorItemId', 'orderPrice', 'deliveryChargeTypeName'])
         self.DBDataFrame = pd.DataFrame(connectDB.MyDataBase().ConnectDataBase())
 
     def selectOrderItems(self):
@@ -13,7 +13,7 @@ class Calculator:
         all_dataframe = RequestOrderList.RequestOrder().allDatafromAPI()
         print(all_dataframe)
         self.orderItems['orderId'] = all_dataframe['orderId']
-        self.orderItems['orderedAt']=all_dataframe['orderedAt']
+        self.orderItems['paidAt'] = all_dataframe['paidAt']
         vendorItemId=[]
         orderPrice=[]
         deliveryChargeTypeName=[]
