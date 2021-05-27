@@ -7,9 +7,9 @@ import pandas as pd
 
 
 class MyApp(QWidget):
-
     dc = DoCalculate.Calculator()
     df = pd.DataFrame()
+
     def __init__(self):
         super().__init__()
         self.initUI()
@@ -22,7 +22,7 @@ class MyApp(QWidget):
         scroll = QScrollArea()
         scroll.setWidget(self.table)
 
-        self.label_calculate = QLabel("정산액표시",self)
+        self.label_calculate = QLabel("정산액표시", self)
         label_font = self.label_calculate.font()
         label_font.setPointSize(20)
         self.label_calculate.setFont(label_font)
@@ -39,7 +39,6 @@ class MyApp(QWidget):
         self.move(300, 300)
         self.resize(1000, 500)
         self.show()
-
 
     def btn1_clicked(self):
         MyApp.df = MyApp.dc.selectOrderItems()

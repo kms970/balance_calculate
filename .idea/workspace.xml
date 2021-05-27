@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="정산액 확인" />
+    <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="정산액 확인">
+      <change afterPath="$PROJECT_DIR$/GUI/MainDialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GUI/MainDialog.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/MainGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/MainGUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +35,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -286,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621790589257</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="쿠팡 api 주문시각-&gt; 결제시각">
+      <created>1621837437183</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1621837437183</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,6 +332,7 @@
     <MESSAGE value="vendorItemId select" />
     <MESSAGE value="정산액 확인" />
     <MESSAGE value="GUI 업데이트" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI 업데이트" />
+    <MESSAGE value="쿠팡 api 주문시각-&gt; 결제시각" />
+    <option name="LAST_COMMIT_MESSAGE" value="쿠팡 api 주문시각-&gt; 결제시각" />
   </component>
 </project>
