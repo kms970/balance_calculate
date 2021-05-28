@@ -6,7 +6,6 @@ import hmac, hashlib
 import urllib.parse
 from RequestOrder import MakeHMAC
 import pandas as pd
-import pprint
 
 class RequestOrder:
     def RequestOrderVendorId(self, nextToken):
@@ -19,8 +18,8 @@ class RequestOrder:
 
         # replace with your own vendorId
         path = "/v2/providers/openapi/apis/api/v4/vendors/" + hMAC.vendorID + "/ordersheets"
-        query = urllib.parse.urlencode({"createdAtFrom": "2021-01-17",
-                                        "createdAtTo": "2021-01-17",
+        query = urllib.parse.urlencode({"createdAtFrom": "2021-05-27",
+                                        "createdAtTo": "2021-05-27",
                                         "status": "FINAL_DELIVERY",
                                         "nextToken": nextToken})
 

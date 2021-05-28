@@ -9,21 +9,25 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import QTime,QDate,QDateTime
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(618, 374)
-        MainWindow.setStyleSheet("background-color: rgb(65, 69, 76);")
+        MainWindow.setStyleSheet("background-color: rgb(47, 49, 54);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(20, 10, 51, 31))
+        self.label_3.setGeometry(QtCore.QRect(20, 10, 71, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_3.setFont(font)
         self.label_3.setStyleSheet("color: rgb(185, 187, 190);")
         self.label_3.setObjectName("label_3")
         self.today_time = QtWidgets.QLabel(self.centralwidget)
-        self.today_time.setGeometry(QtCore.QRect(80, 10, 101, 31))
+        self.today_time.setGeometry(QtCore.QRect(120, 10, 181, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
@@ -32,14 +36,14 @@ class Ui_MainWindow(object):
         self.today_time.setStyleSheet("color: rgb(255, 255, 255);")
         self.today_time.setObjectName("today_time")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(20, 50, 571, 111))
+        self.groupBox.setGeometry(QtCore.QRect(20, 50, 581, 111))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.groupBox.setFont(font)
         self.groupBox.setStyleSheet("background-color: rgb(116, 124, 136);\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(234, 234, 234);\n"
 "background-color: rgb(81, 86, 95);")
         self.groupBox.setObjectName("groupBox")
         self.first_sales_name = QtWidgets.QLabel(self.groupBox)
@@ -70,44 +74,44 @@ class Ui_MainWindow(object):
         self.third_sales.setGeometry(QtCore.QRect(510, 80, 56, 21))
         self.third_sales.setObjectName("third_sales")
         self.show_graph = QtWidgets.QPushButton(self.centralwidget)
-        self.show_graph.setGeometry(QtCore.QRect(180, 290, 91, 41))
+        self.show_graph.setGeometry(QtCore.QRect(180, 290, 101, 51))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.show_graph.setFont(font)
-        self.show_graph.setStyleSheet("background-color: rgb(238, 238, 238);\n"
-"color: rgb(185, 187, 190);\n"
-"background-color: rgb(47, 49, 54);")
+        self.show_graph.setStyleSheet("background-color: rgb(81, 86, 95);\n"
+"color: rgb(234, 234, 234);\n"
+"")
         self.show_graph.setObjectName("show_graph")
         self.show_table = QtWidgets.QPushButton(self.centralwidget)
-        self.show_table.setGeometry(QtCore.QRect(340, 290, 91, 41))
+        self.show_table.setGeometry(QtCore.QRect(340, 290, 101, 51))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.show_table.setFont(font)
-        self.show_table.setStyleSheet("background-color: rgb(238, 238, 238);\n"
-"color: rgb(185, 187, 190);\n"
-"background-color: rgb(47, 49, 54);")
+        self.show_table.setStyleSheet("background-color: rgb(81, 86, 95);\n"
+"color: rgb(234, 234, 234);\n"
+"")
         self.show_table.setObjectName("show_table")
         self.show_orderlist = QtWidgets.QPushButton(self.centralwidget)
-        self.show_orderlist.setGeometry(QtCore.QRect(500, 290, 91, 41))
+        self.show_orderlist.setGeometry(QtCore.QRect(500, 290, 101, 51))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.show_orderlist.setFont(font)
-        self.show_orderlist.setStyleSheet("background-color: rgb(238, 238, 238);\n"
-"background-color: rgb(47, 49, 54);\n"
-"color: rgb(185, 187, 190);")
+        self.show_orderlist.setStyleSheet("background-color: rgb(81, 86, 95);\n"
+"color: rgb(234, 234, 234);")
         self.show_orderlist.setObjectName("show_orderlist")
         self.groupBox_2 = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox_2.setGeometry(QtCore.QRect(20, 180, 571, 80))
+        self.groupBox_2.setGeometry(QtCore.QRect(20, 180, 581, 80))
         font = QtGui.QFont()
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.groupBox_2.setFont(font)
-        self.groupBox_2.setStyleSheet("color: rgb(255, 255, 255);\n"
+        self.groupBox_2.setStyleSheet("color: rgb(234, 234, 234);\n"
 "background-color: rgb(81, 86, 95);")
+        self.groupBox_2.setFlat(False)
         self.groupBox_2.setObjectName("groupBox_2")
         self.label = QtWidgets.QLabel(self.groupBox_2)
         self.label.setGeometry(QtCore.QRect(30, 30, 51, 21))
@@ -120,8 +124,11 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.at_to.setFont(font)
+        self.at_to.setStyleSheet("color: rgb(255, 255, 255);")
+        self.at_to.setFrame(False)
         self.at_to.setCalendarPopup(True)
         self.at_to.setObjectName("at_to")
+        self.at_to.setDate(QDate.currentDate())
         self.label_2 = QtWidgets.QLabel(self.groupBox_2)
         self.label_2.setGeometry(QtCore.QRect(280, 30, 51, 21))
         font = QtGui.QFont()
@@ -133,22 +140,22 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.at_from.setFont(font)
+        self.at_from.setStyleSheet("color: rgb(255, 255, 255);")
+        self.at_from.setFrame(False)
         self.at_from.setCalendarPopup(True)
         self.at_from.setObjectName("at_from")
+        self.at_from.setDate(QDate.currentDate())
         self.do_calculate = QtWidgets.QPushButton(self.centralwidget)
-        self.do_calculate.setGeometry(QtCore.QRect(20, 290, 91, 41))
+        self.do_calculate.setGeometry(QtCore.QRect(20, 290, 101, 51))
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.do_calculate.setFont(font)
-        self.do_calculate.setStyleSheet("background-color: rgb(238, 238, 238);\n"
-"color: rgb(185, 187, 190);\n"
-"background-color: rgb(47, 49, 54);")
+        self.do_calculate.setStyleSheet("color: rgb(234, 234, 234);\n"
+"background-color: rgb(81, 86, 95);\n"
+"background-color: rgb(81, 86, 95);")
         self.do_calculate.setObjectName("do_calculate")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -157,7 +164,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "정산프로그램"))
         self.label_3.setText(_translate("MainWindow", "현재날짜"))
-        self.today_time.setText(_translate("MainWindow", "TextLabel"))
+        self.today_time.setText(_translate("MainWindow", str(QDate.currentDate().toString('yyyy-MM-dd'))))
         self.groupBox.setTitle(_translate("MainWindow", "판매순위"))
         self.first_sales_name.setText(_translate("MainWindow", "TextLabel"))
         self.second_sales_name.setText(_translate("MainWindow", "TextLabel"))
@@ -175,6 +182,3 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "시작일"))
         self.label_2.setText(_translate("MainWindow", "종료일"))
         self.do_calculate.setText(_translate("MainWindow", "정산하기"))
-
-
-
