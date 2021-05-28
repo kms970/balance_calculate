@@ -1,26 +1,33 @@
+import sys
 import urllib.request
 import ssl
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import hmac, hashlib
 import urllib.parse
+
+from GUI import MainDialog
 from RequestOrder import MakeHMAC
 import pandas as pd
 
 class RequestOrder:
-    def RequestOrderVendorId(self, nextToken):
+    def RequestOrderVendorId(self, nextToken, date_to, date_from):
         hMAC = MakeHMAC.RequestHeader()
 
         gmt_time = datetime.now() - timedelta(hours=9)  # 한국 기준
         gmt_time_str = "{:%y%m%d}T{:%H%M%S}Z".format(gmt_time, gmt_time)
 
+        print(date_from)
+        print(date_to)
+        print(date.today()-date.fromisoformat(date_from))
+
         method = "GET"
 
         # replace with your own vendorId
         path = "/v2/providers/openapi/apis/api/v4/vendors/" + hMAC.vendorID + "/ordersheets"
-        query = urllib.parse.urlencode({"createdAtFrom": "2021-05-27",
-                                        "createdAtTo": "2021-05-27",
-                                        "status": "FINAL_DELIVERY",
+        query = urllib.parse.urlencode({"createdAtFrom": date_from,
+                                        "createdAtTo": date_to,
+                                        "status": "ACCEPT",
                                         "nextToken": nextToken})
 
         message = gmt_time_str + method + path + query
@@ -69,12 +76,12 @@ class RequestOrder:
             return responseJson
 
 
-    def allDatafromAPI(self):
+    def allDatafromAPI(self,date_to, date_from):
         next_page = 1
         all_dataframe = pd.DataFrame()
 
         while True:
-            df = self.RequestOrderVendorId(next_page)
+            df = self.RequestOrderVendorId(next_page,date_to,date_from)
 
             dfJson = pd.DataFrame.from_dict(df['data'], orient='columns')
             all_dataframe = pd.concat([dfJson, all_dataframe], ignore_index=True)

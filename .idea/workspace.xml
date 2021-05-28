@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="Make GUI">
-      <change afterPath="$PROJECT_DIR$/GUI/CalculateDialog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/CalculateDialog.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/balance_calculate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/balance_calculate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="Make Dialog">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/MainDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/MainDialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/MainDialog.ui" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/MainDialog.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +51,7 @@
       <recent name="D:\balance_calculate\RequestOrder" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MainGUI">
+  <component name="RunManager" selected="Python.main">
     <configuration name="CalculateDialog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="balance_calculate" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.RequestOrderList" />
         <item itemvalue="Python.MainGUI" />
         <item itemvalue="Python.CalculateDialog" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.DoCalculate" />
-        <item itemvalue="Python.RequestOrderList" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +182,8 @@
       <updated>1613974610282</updated>
       <workItem from="1622189953265" duration="434000" />
       <workItem from="1622190405828" duration="15000" />
-      <workItem from="1622190718957" duration="1239000" />
+      <workItem from="1622190718957" duration="1475000" />
+      <workItem from="1622217831412" duration="8059000" />
     </task>
     <task id="LOCAL-00001" summary="version start">
       <created>1613974749789</created>
@@ -372,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622130188987</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Make Dialog">
+      <created>1622193729495</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1622193729495</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,10 +412,13 @@
     <MESSAGE value="GUI 업데이트" />
     <MESSAGE value="쿠팡 api 주문시각-&gt; 결제시각" />
     <MESSAGE value="Make GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make GUI" />
+    <MESSAGE value="Make Dialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make Dialog" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/balance_calculate$main.coverage" NAME="main 커버리지 결과" MODIFIED="1622189980913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/balance_calculate$main.coverage" NAME="main 커버리지 결과" MODIFIED="1622230053958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/balance_calculate$MainGUI.coverage" NAME="MainGUI 커버리지 결과" MODIFIED="1622223762166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/balance_calculate$CalculateDialog.coverage" NAME="CalculateDialog 커버리지 결과" MODIFIED="1622193501511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/balance_calculate$RequestOrderList.coverage" NAME="RequestOrderList 커버리지 결과" MODIFIED="1622227348689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RequestOrder" />
   </component>
 </project>
