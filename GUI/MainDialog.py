@@ -11,6 +11,7 @@ import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QDate
 
+from GUI.CalculateDialog import Ui_CalculateDialog
 from RequestOrder import RequestOrderList
 
 
@@ -170,6 +171,11 @@ class Ui_MainWindow(object):
     def button1(self):
         date_to=self.at_to.date().toString("yyyy-MM-dd")
         date_from=self.at_from.date().toString("yyyy-MM-dd")
-        a=RequestOrderList.RequestOrder()
-        b=a.RequestOrderVendorId(1,date_to,date_from)
-        print(b)
+        # a=RequestOrderList.RequestOrder()
+        # b=a.RequestOrderVendorId(1,date_to,date_from)
+        # print(b)
+        CalculateDialog = QtWidgets.QDialog()
+        ui = Ui_CalculateDialog()
+        ui.setupUi(CalculateDialog)
+        CalculateDialog.show()
+        CalculateDialog.exec_()

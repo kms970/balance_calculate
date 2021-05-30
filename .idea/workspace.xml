@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="Make Dialog">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/CalculateDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/CalculateDialog.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/MainDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/MainDialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,9 +165,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.CalculateDialog" />
         <item itemvalue="Python.RequestOrderList" />
         <item itemvalue="Python.MainGUI" />
-        <item itemvalue="Python.CalculateDialog" />
         <item itemvalue="Python.DoCalculate" />
       </list>
     </recent_temporary>
@@ -416,9 +416,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Make Dialog" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/balance_calculate$main.coverage" NAME="main 커버리지 결과" MODIFIED="1622230053958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/balance_calculate$main.coverage" NAME="main 커버리지 결과" MODIFIED="1622360225074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/balance_calculate$MainGUI.coverage" NAME="MainGUI 커버리지 결과" MODIFIED="1622223762166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
-    <SUITE FILE_PATH="coverage/balance_calculate$CalculateDialog.coverage" NAME="CalculateDialog 커버리지 결과" MODIFIED="1622193501511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/balance_calculate$CalculateDialog.coverage" NAME="CalculateDialog 커버리지 결과" MODIFIED="1622360395689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/balance_calculate$RequestOrderList.coverage" NAME="RequestOrderList 커버리지 결과" MODIFIED="1622227348689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RequestOrder" />
   </component>
 </project>
