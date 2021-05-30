@@ -62,13 +62,9 @@ class Ui_CalculateDialog(object):
 "color: rgb(65, 69, 76);")
         self.OrderTab.setElideMode(QtCore.Qt.ElideLeft)
         self.OrderTab.setTabsClosable(False)
-        self.OrderTab.setTabBarAutoHide(True)
-        self.OrderTab.setObjectName("OrderTab")
         self.orderListTab = QtWidgets.QWidget()
-        self.orderListTab.setObjectName("orderListTab")
         self.OrderTab.addTab(self.orderListTab, "")
         self.returnListTab = QtWidgets.QWidget()
-        self.returnListTab.setObjectName("returnListTab")
         self.OrderTab.addTab(self.returnListTab, "")
 
         self.retranslateUi(CalculateDialog)
@@ -86,13 +82,3 @@ class Ui_CalculateDialog(object):
         self.CalculateAtTo.setText(_translate("CalculateDialog", "정산금액"))
         self.OrderTab.setTabText(self.OrderTab.indexOf(self.orderListTab), _translate("CalculateDialog", "주문내역"))
         self.OrderTab.setTabText(self.OrderTab.indexOf(self.returnListTab), _translate("CalculateDialog", "반품내역"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    CalculateDialog = QtWidgets.QDialog()
-    ui = Ui_CalculateDialog()
-    ui.setupUi(CalculateDialog)
-    CalculateDialog.show()
-    sys.exit(app.exec_())

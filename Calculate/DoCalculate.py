@@ -8,9 +8,9 @@ class Calculator:
         self.orderItems = pd.DataFrame(columns=['orderId','paidAt', 'vendorItemId', 'orderPrice', 'deliveryChargeTypeName'])
         self.DBDataFrame = pd.DataFrame(connectDB.MyDataBase().ConnectDataBase())
 
-    def selectOrderItems(self):
+    def selectOrderItems(self,date_to,date_from):
         #print(self.orderItems)
-        all_dataframe = RequestOrderList.RequestOrder().allDatafromAPI()
+        all_dataframe = RequestOrderList.allDatafromAPI(date_to,date_from)
         print(all_dataframe)
         self.orderItems['orderId'] = all_dataframe['orderId']
         self.orderItems['paidAt'] = all_dataframe['paidAt']

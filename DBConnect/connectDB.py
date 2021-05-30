@@ -16,10 +16,11 @@ class MyDataBase:
         try:
             with DBconnection.cursor() as curs:
                 curs = DBconnection.cursor(pymysql.cursors.DictCursor)
-                connectSql = "select * from List.CoupangList"
+                connectSql = "select * from List.PurchaseList"
                 curs.execute(connectSql)
                 data = curs.fetchall()
                 self.DataBaseDataFrame = pd.DataFrame(data)
+                #print(self.DataBaseDataFrame)
 
                 return self.DataBaseDataFrame
         finally:
