@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
+    <width>727</width>
     <height>540</height>
    </rect>
   </property>
@@ -45,7 +45,7 @@
     <rect>
      <x>130</x>
      <y>20</y>
-     <width>271</width>
+     <width>171</width>
      <height>41</height>
     </rect>
    </property>
@@ -105,7 +105,7 @@
     <string>종료날짜</string>
    </property>
   </widget>
-  <widget class="QLabel" name="CalculateAtTo">
+  <widget class="QLabel" name="CalculateAtFrom">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -126,7 +126,7 @@
     <string>정산금액</string>
    </property>
   </widget>
-  <widget class="QLabel" name="CalculateAtFrom">
+  <widget class="QLabel" name="CalculateAtTo">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -155,7 +155,7 @@
     <rect>
      <x>30</x>
      <y>130</y>
-     <width>541</width>
+     <width>561</width>
      <height>371</height>
     </rect>
    </property>
@@ -185,6 +185,50 @@ color: rgb(65, 69, 76);</string>
      <string>반품내역</string>
     </attribute>
    </widget>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>20</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(234, 234, 234);</string>
+   </property>
+   <property name="text">
+    <string>반품금액</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ReturnLabel">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>20</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(234, 234, 234);</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
   </widget>
  </widget>
  <resources/>

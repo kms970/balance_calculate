@@ -16,10 +16,6 @@ def RequestOrderVendorId(nextToken, date_to, date_from):
     gmt_time = datetime.now() - timedelta(hours=9)  # 한국 기준
     gmt_time_str = "{:%y%m%d}T{:%H%M%S}Z".format(gmt_time, gmt_time)
 
-    print(date_from)
-    print(date_to)
-    print(date.today()-date.fromisoformat(date_from))
-
     method = "GET"
 
     # replace with your own vendorId
@@ -77,17 +73,17 @@ def RequestOrderVendorId(nextToken, date_to, date_from):
 
 def allDatafromAPI(date_to, date_from):
     next_page = 1
-    all_dataframe = pd.DataFrame()
+    all_order_dataframe = pd.DataFrame()
 
     while True:
         df = RequestOrderVendorId(next_page,date_to,date_from)
 
         dfJson = pd.DataFrame.from_dict(df['data'], orient='columns')
-        all_dataframe = pd.concat([dfJson, all_dataframe], ignore_index=True)
+        all_order_dataframe = pd.concat([dfJson, all_order_dataframe], ignore_index=True)
         next_page = df['nextToken']
 
         if next_page == '':
             break
 
-    # print(all_dataframe)
-    return all_dataframe
+    # print(all_order_dataframe)
+    return all_order_dataframe

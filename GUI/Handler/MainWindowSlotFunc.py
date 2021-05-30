@@ -20,6 +20,6 @@ class MainWindowFunc(QtWidgets.QMainWindow, Ui_MainWindow):
         self.calculate_window.show()
 
 class CalculateDialogFunc(QtWidgets.QDialog,Ui_CalculateDialog):
-    def __init__(self,parent=None):
+    def __init__(self, parent=None):
         super(CalculateDialogFunc, self).__init__(parent)
         self.setupUi(self)

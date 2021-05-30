@@ -10,14 +10,15 @@ class Calculator:
 
     def selectOrderItems(self,date_to,date_from):
         #print(self.orderItems)
-        all_dataframe = RequestOrderList.allDatafromAPI(date_to,date_from)
-        print(all_dataframe)
-        self.orderItems['orderId'] = all_dataframe['orderId']
-        self.orderItems['paidAt'] = all_dataframe['paidAt']
+        all_order_dataframe = RequestOrderList.allDatafromAPI(date_to,date_from)
+        print(all_order_dataframe)
+        self.orderItems['orderId'] = all_order_dataframe['orderId']
+        self.orderItems['paidAt'] = all_order_dataframe['paidAt']
+
         vendorItemId=[]
         orderPrice=[]
         deliveryChargeTypeName=[]
-        for i in all_dataframe['orderItems']:
+        for i in all_order_dataframe['orderItems']:
             for data in i:
                 vendorItemId.append(data['vendorItemId'])
                 orderPrice.append(data['orderPrice'])
