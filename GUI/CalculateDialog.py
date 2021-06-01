@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_CalculateDialog(object):
     def setupUi(self, CalculateDialog):
-        CalculateDialog.setWindowModality(QtCore.Qt.WindowModal)
+        CalculateDialog.setWindowModality(QtCore.Qt.NonModal)
         CalculateDialog.resize(627, 540)
         CalculateDialog.setStyleSheet("background-color: rgb(47, 49, 54);")
         self.label = QtWidgets.QLabel(CalculateDialog)

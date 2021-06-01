@@ -65,8 +65,7 @@ class Ui_MainWindow():
         font.setWeight(75)
         self.show_graph.setFont(font)
         self.show_graph.setStyleSheet("background-color: rgb(81, 86, 95);\n"
-"color: rgb(234, 234, 234);\n"
-"")
+"color: rgb(234, 234, 234);\n")
         self.show_table = QtWidgets.QPushButton(self.centralwidget)
         self.show_table.setGeometry(QtCore.QRect(340, 290, 101, 51))
         font = QtGui.QFont()
@@ -74,8 +73,7 @@ class Ui_MainWindow():
         font.setWeight(75)
         self.show_table.setFont(font)
         self.show_table.setStyleSheet("background-color: rgb(81, 86, 95);\n"
-"color: rgb(234, 234, 234);\n"
-"")
+"color: rgb(234, 234, 234);\n")
         self.show_orderlist = QtWidgets.QPushButton(self.centralwidget)
         self.show_orderlist.setGeometry(QtCore.QRect(500, 290, 101, 51))
         font = QtGui.QFont()

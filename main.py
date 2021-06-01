@@ -5,7 +5,7 @@ from DBConnect.connectDB import MyDataBase
 
 if __name__ == "__main__":
     import sys
-    print(MyDataBase().ConnectDataBase())
+    # print(MyDataBase().ConnectDataBase())
     app = QApplication(sys.argv)
     MainWindow = MainWindowFunc()
     MainWindow.show()
