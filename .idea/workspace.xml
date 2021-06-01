@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="값 전달 테스트(핸들러 이용)">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ce97e80-d515-4d5f-84ef-c68e6f65eb6e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ce97e80-d515-4d5f-84ef-c68e6f65eb6e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBConnect/connectDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBConnect/connectDB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/CalculateDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/CalculateDialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/CalculateDialog.ui" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/CalculateDialog.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Handler/MainWindowSlotFunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Handler/MainWindowSlotFunc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/MainDialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/MainDialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="날짜 값 전달(핸들러 이용)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +188,7 @@
       <workItem from="1622395428222" duration="349000" />
       <workItem from="1622446241763" duration="2762000" />
       <workItem from="1622520796746" duration="717000" />
-      <workItem from="1622533248893" duration="3391000" />
+      <workItem from="1622533248893" duration="4024000" />
     </task>
     <task id="LOCAL-00001" summary="version start">
       <created>1613974749789</created>
@@ -416,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622390278738</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="날짜 값 전달(핸들러 이용)">
+      <created>1622540521765</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1622540521765</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +455,8 @@
     <MESSAGE value="Make Dialog" />
     <MESSAGE value="값전달 테스트" />
     <MESSAGE value="값 전달 테스트(핸들러 이용)" />
-    <option name="LAST_COMMIT_MESSAGE" value="값 전달 테스트(핸들러 이용)" />
+    <MESSAGE value="날짜 값 전달(핸들러 이용)" />
+    <option name="LAST_COMMIT_MESSAGE" value="날짜 값 전달(핸들러 이용)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/balance_calculate$main.coverage" NAME="main 커버리지 결과" MODIFIED="1622536664465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
