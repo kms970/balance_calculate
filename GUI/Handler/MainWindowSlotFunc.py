@@ -5,7 +5,7 @@ from PyQt5.QtCore import QDate
 
 
 class MainWindowFunc(QtWidgets.QMainWindow, Ui_MainWindow):
-    def __init__(self,parent=None):
+    def __init__(self, parent=None):
         super(MainWindowFunc, self).__init__(parent)
         self.setupUi(self)
         self.calculate_window = CalculateDialogFunc(self)

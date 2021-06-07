@@ -10,7 +10,7 @@ class Calculator:
 
     def selectOrderItems(self,date_to,date_from):
         #print(self.orderItems)
-        all_order_dataframe = RequestOrderList.allDatafromAPI(date_to,date_from)
+        all_order_dataframe = RequestOrderList.allDatafromAPI(date_to, date_from)
         print(all_order_dataframe)
         self.orderItems['orderId'] = all_order_dataframe['orderId']
         self.orderItems['paidAt'] = all_order_dataframe['paidAt']
