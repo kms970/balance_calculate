@@ -25,3 +25,4 @@ class MyDataBase:
                 return self.DataBaseDataFrame
         finally:
             DBconnection.close()
+

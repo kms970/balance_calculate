@@ -1,6 +1,8 @@
 from GUI.CalculateDialog import *
 from GUI.MainDialog import Ui_MainWindow
 
+from Calculate.DoCalculate import Calculator
+
 from PyQt5.QtCore import QDate
 
 
@@ -24,7 +26,9 @@ class MainWindowFunc(QtWidgets.QMainWindow, Ui_MainWindow):
             self.calculate_window.CalculateAtTo.setText(self.at_to.date().toString('yyyy-MM-dd'))
             self.calculate_window.CalculateAtFrom.setText(self.at_from.date().toString('yyyy-MM-dd'))
             print(self.at_from.date().daysTo(self.at_to.date()))
-            #self.calculate_window.CalculateLabel.
+            cal = Calculator()
+            cal.selectOrderItems(self.at_to.date().toString('yyyy-MM-dd'), self.at_from.date().toString('yyyy-MM-dd'))
+            self.calculate_window.CalculateLabel.setText(str(cal.calculate()))
             self.calculate_window.show()
 
     def is_date_true(self):

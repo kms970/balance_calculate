@@ -10,7 +10,7 @@ from GUI import MainDialog
 from RequestOrder import MakeHMAC
 import pandas as pd
 
-def RequestOrderVendorId(nextToken, date_to, date_from):
+def RequestOrderVendorId(nextToken, date_to, date_from, status):
     hMAC = MakeHMAC.RequestHeader()
 
     gmt_time = datetime.now() - timedelta(hours=9)  # 한국 기준
@@ -22,7 +22,7 @@ def RequestOrderVendorId(nextToken, date_to, date_from):
     path = "/v2/providers/openapi/apis/api/v4/vendors/" + hMAC.vendorID + "/ordersheets"
     query = urllib.parse.urlencode({"createdAtFrom": date_from,
                                     "createdAtTo": date_to,
-                                    "status": "ACCEPT",
+                                    "status": status,
                                     "nextToken": nextToken})
 
     message = gmt_time_str + method + path + query
@@ -39,6 +39,7 @@ def RequestOrderVendorId(nextToken, date_to, date_from):
 
     req.add_header("Content-type", "application/json;charset=UTF-8")
     req.add_header("Authorization", authorization)
+    req.add_header("X-EXTENDED-TIMEOUT", "90000")
 
     req.get_method = lambda: method
 
@@ -75,15 +76,17 @@ def allDatafromAPI(date_to, date_from):
     next_page = 1
     all_order_dataframe = pd.DataFrame()
 
-    while True:
-        df = RequestOrderVendorId(next_page,date_to,date_from)
+    status = ["ACCEPT", "INSTRUCT", "DEPARTURE", "DELIVERING", "FINAL_DELIVERY"]
+    for stat in status:
+        while True:
+            df = RequestOrderVendorId(next_page, date_to, date_from, stat)
 
-        dfJson = pd.DataFrame.from_dict(df['data'], orient='columns')
-        all_order_dataframe = pd.concat([dfJson, all_order_dataframe], ignore_index=True)
-        next_page = df['nextToken']
+            dfJson = pd.DataFrame.from_dict(df['data'], orient='columns')
+            all_order_dataframe = pd.concat([dfJson, all_order_dataframe], ignore_index=True)
+            next_page = df['nextToken']
 
-        if next_page == '':
-            break
+            if next_page == '':
+                break
 
     # print(all_order_dataframe)
     return all_order_dataframe
