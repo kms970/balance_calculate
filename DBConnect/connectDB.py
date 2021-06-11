@@ -6,9 +6,10 @@ PORT = 3306
 USER = 'kkhan97'
 PASSWORD = 'grandmaster1'
 
+
 class MyDataBase:
     def __init__(self):
-       self.DataBaseDataFrame = pd.DataFrame()
+        self.DataBaseDataFrame = pd.DataFrame()
 
     def ConnectDataBase(self):
         DBconnection = pymysql.connect(host=HOST, port=PORT, user=USER, password=PASSWORD)
@@ -20,9 +21,8 @@ class MyDataBase:
                 curs.execute(connectSql)
                 data = curs.fetchall()
                 self.DataBaseDataFrame = pd.DataFrame(data)
-                #print(self.DataBaseDataFrame)
+                # print(self.DataBaseDataFrame)
 
                 return self.DataBaseDataFrame
         finally:
             DBconnection.close()
-

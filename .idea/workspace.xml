@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="날짜 값 전달(핸들러 이용)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculate/DoCalculate.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calculate/DoCalculate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBConnect/connectDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBConnect/connectDB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Handler/MainWindowSlotFunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Handler/MainWindowSlotFunc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" beforeDir="false" afterPath="$PROJECT_DIR$/RequestOrder/RequestOrderList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +201,8 @@
       <workItem from="1623128756181" duration="1214000" />
       <workItem from="1623130107871" duration="3414000" />
       <workItem from="1623222547590" duration="43000" />
-      <workItem from="1623223382573" duration="707000" />
+      <workItem from="1623223382573" duration="2087000" />
+      <workItem from="1623251510081" duration="1067000" />
     </task>
     <task id="LOCAL-00001" summary="version start">
       <created>1613974749789</created>
@@ -445,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623049363568</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="날짜 값 전달(핸들러 이용)">
+      <created>1623227048895</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623227048896</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
