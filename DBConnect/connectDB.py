@@ -1,10 +1,10 @@
 import pymysql
 import pandas as pd
 
-HOST = 'dalogisdb.cn1pvuxm8ev6.us-east-2.rds.amazonaws.com'
+HOST = '************'
 PORT = 3306
-USER = 'kkhan97'
-PASSWORD = 'grandmaster1'
+USER = '************'
+PASSWORD = '*********'
 
 
 class MyDataBase:

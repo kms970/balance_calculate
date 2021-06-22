@@ -967,104 +967,79 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="283" parent="1" name="rdsadmin">
       <Host>localhost</Host>
     </user>
-    <table id="284" parent="2" name="CoupangList"/>
+    <table id="284" parent="2" name="productList"/>
     <table id="285" parent="2" name="purchaseList"/>
     <column id="286" parent="284" name="manufacturer">
       <Position>1</Position>
       <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="287" parent="284" name="product_family">
+    <column id="287" parent="284" name="productFamily">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="288" parent="284" name="item_name">
+    <column id="288" parent="284" name="itemName">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="289" parent="284" name="product_standard">
+    <column id="289" parent="284" name="productStandard">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="290" parent="284" name="box_quantity">
+    <column id="290" parent="284" name="boxQuantity">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="291" parent="284" name="price">
+    <column id="291" parent="284" name="optionId">
       <Position>6</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <column id="292" parent="284" name="purchase_price">
-      <Position>7</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <column id="293" parent="284" name="margin_rate">
-      <Position>8</Position>
-      <DataType>double|0s</DataType>
-    </column>
-    <column id="294" parent="284" name="option_id">
-      <Position>9</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="295" parent="284" name="coupang_fees">
-      <Position>10</Position>
-      <DataType>double|0s</DataType>
+    <column id="292" parent="284" name="freeDelivery">
+      <Position>7</Position>
+      <DataType>varchar(45)|0s</DataType>
     </column>
-    <column id="296" parent="284" name="free_delivery">
-      <Position>11</Position>
-      <DataType>tinyint|0s</DataType>
-      <DefaultExpression>1</DefaultExpression>
-    </column>
-    <column id="297" parent="284" name="delivery_fee">
-      <Position>12</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <column id="298" parent="284" name="sales_quantity">
-      <Position>13</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <index id="299" parent="284" name="option_id_UNIQUE">
-      <ColNames>option_id</ColNames>
+    <index id="293" parent="284" name="optionId_UNIQUE">
+      <ColNames>optionId</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="300" parent="284" name="PRIMARY">
+    <key id="294" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>option_id</ColNames>
+      <ColNames>optionId</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="301" parent="284" name="option_id_UNIQUE">
-      <ColNames>option_id</ColNames>
-      <UnderlyingIndexName>option_id_UNIQUE</UnderlyingIndexName>
+    <key id="295" parent="284" name="optionId_UNIQUE">
+      <ColNames>optionId</ColNames>
+      <UnderlyingIndexName>optionId_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="302" parent="285" name="optionId">
+    <column id="296" parent="285" name="optionId">
       <Position>1</Position>
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="303" parent="285" name="purchasePrice">
+    <column id="297" parent="285" name="purchasePrice">
       <Position>2</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="304" parent="285" name="coupangFee">
+    <column id="298" parent="285" name="coupangFee">
       <Position>3</Position>
       <DataType>double|0s</DataType>
     </column>
-    <column id="305" parent="285" name="salesQuantity">
+    <column id="299" parent="285" name="salesQuantity">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="306" parent="285" name="optionId_UNIQUE">
+    <index id="300" parent="285" name="optionId_UNIQUE">
       <ColNames>optionId</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="307" parent="285" name="PRIMARY">
+    <key id="301" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>optionId</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="308" parent="285" name="optionId_UNIQUE">
+    <key id="302" parent="285" name="optionId_UNIQUE">
       <ColNames>optionId</ColNames>
       <UnderlyingIndexName>optionId_UNIQUE</UnderlyingIndexName>
     </key>

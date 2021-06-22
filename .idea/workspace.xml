@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9349d7e-36c8-42ca-88e4-42567efceb54" name="디폴트 변경 목록" comment="날짜 값 전달(핸들러 이용)">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ce97e80-d515-4d5f-84ef-c68e6f65eb6e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ce97e80-d515-4d5f-84ef-c68e6f65eb6e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBConnect/connectDB.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBConnect/connectDB.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../logis" />
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
@@ -203,6 +203,13 @@
       <workItem from="1623222547590" duration="43000" />
       <workItem from="1623223382573" duration="2087000" />
       <workItem from="1623251510081" duration="1067000" />
+      <workItem from="1623396392277" duration="265000" />
+      <workItem from="1623921636195" duration="5000" />
+      <workItem from="1623998024317" duration="160000" />
+      <workItem from="1624004578212" duration="160000" />
+      <workItem from="1624005290125" duration="32000" />
+      <workItem from="1624174011281" duration="5000" />
+      <workItem from="1624358588632" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="version start">
       <created>1613974749789</created>
@@ -449,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623227048896</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="날짜 값 전달(핸들러 이용)">
+      <created>1623396398858</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1623396398858</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +509,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/balance_calculate$DoCalculate.coverage" NAME="DoCalculate 커버리지 결과" MODIFIED="1623129125211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Calculate" />
-    <SUITE FILE_PATH="coverage/balance_calculate$main.coverage" NAME="main 커버리지 결과" MODIFIED="1623130839291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/balance_calculate$main.coverage" NAME="main 커버리지 결과" MODIFIED="1623998025280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/balance_calculate$MainGUI.coverage" NAME="MainGUI 커버리지 결과" MODIFIED="1622223762166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/balance_calculate$CalculateDialog.coverage" NAME="CalculateDialog 커버리지 결과" MODIFIED="1622360395689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/balance_calculate$RequestOrderList.coverage" NAME="RequestOrderList 커버리지 결과" MODIFIED="1622369535870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RequestOrder" />
